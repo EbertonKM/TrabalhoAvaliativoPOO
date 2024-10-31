@@ -21,10 +21,7 @@
 
     <HBox>
         <VBox>
-        <padding>
-            <Insets top="-15" bottom="-15" right="-15" left="-15"/>
-        </padding>
-        <ImageView fitHeight="280.0" fitWidth="280.0" preserveRatio="true">
+        <ImageView styleClass="home-imageview" fitHeight="240.0" fitWidth="240.0" preserveRatio="true">
             <Image url="@../../../img/pontoDoPovoLogo-GeradaPorIA.png" />
         </ImageView>
         </VBox>
