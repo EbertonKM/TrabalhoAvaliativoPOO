@@ -12,11 +12,15 @@
 
     <MenuBar styleClass="home-menubar">
         <Menu text="_Funcionalidades">
-            <MenuItem fx:id="menuItem1" text="_Caixa" />
-            <MenuItem fx:id="menuItem2" text="_Verificar Produto" />
+            <MenuItem fx:id="menuItemCaixa" text="_Caixa" />
+            <MenuItem fx:id="menuItemVerificarProduto" text="_Verificar Produto" />
         </Menu>
-        <Menu text="S_obre" />
-        <Menu text="_Sair" />
+        <Menu text="S_obre" fx:id="menuSobre">
+            <MenuItem/>
+        </Menu>
+        <Menu text="_Sair" fx:id="menuSair">
+            <MenuItem/>
+        </Menu>
     </MenuBar>
 
     <HBox>
@@ -30,10 +34,10 @@
             <padding>
                 <Insets top="30" bottom="30" right="10" left="10"/>
             </padding>
-            <Button>Caixa</Button>
-            <Button>Verificar Produto</Button>
-            <Button>Sobre o Sistema</Button>
-            <Button>Sair</Button>
+            <Button onMouseClicked="#onCaixaButtonClick">Caixa</Button>
+            <Button onMouseClicked="#onVerificarProdutoButtonClick">Verificar Produto</Button>
+            <Button onMouseClicked="#onSobreButtonClick">Sobre o Sistema</Button>
+            <Button onMouseClicked="#onSairButtonClick">Sair</Button>
             <Label>versão 1.0.0</Label>
         </VBox>
     </HBox>
