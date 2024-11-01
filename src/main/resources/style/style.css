@@ -1,0 +1,31 @@
+.home-main-box {
+    -fx-background-color: linear-gradient(to bottom right, #c5c6c7, #878f99, #656c75);
+}
+
+.home-menubar {
+    -fx-font-size: 13px;
+    -fx-border-color: #c5c6c7;
+    -fx-border-width: 1px;
+    -fx-z-index: 1;
+}
+
+.home-options .button {
+    -fx-background-color: #5b6070;
+    -fx-text-fill: #dedfe0;
+    -fx-border-color: #dedfe0;
+    -fx-font-size: 16px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 35px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.home-options .button:hover {
+    -fx-background-color: #dedfe0;
+    -fx-text-fill: #5b6070;
+    -fx-border-color: #5b6070;
+}
+
+.home-imageview {
+    -fx-z-index: -1;
+}
