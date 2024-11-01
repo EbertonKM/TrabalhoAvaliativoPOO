@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+<VBox styleClass="home-main-box"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.example.sistemacaixapontodopovo.HomeController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <MenuBar styleClass="home-menubar">
+        <Menu text="_Funcionalidades">
+            <MenuItem fx:id="menuItemCaixa" text="_Caixa" />
+            <MenuItem fx:id="menuItemVerificarProduto" text="_Verificar Produto" />
+        </Menu>
+        <Menu text="S_obre" fx:id="menuSobre">
+            <MenuItem/>
+        </Menu>
+        <Menu text="_Sair" fx:id="menuSair">
+            <MenuItem/>
+        </Menu>
+    </MenuBar>
+
+    <HBox>
+        <VBox>
+        <ImageView styleClass="home-imageview" fitHeight="240.0" fitWidth="240.0" preserveRatio="true">
+            <Image url="@../../../img/pontoDoPovoLogo-GeradaPorIA.png" />
+        </ImageView>
+        </VBox>
+
+        <VBox styleClass="home-options" spacing="7.0">
+            <padding>
+                <Insets top="30" bottom="30" right="10" left="10"/>
+            </padding>
+            <Button onMouseClicked="#onCaixaButtonClick">Caixa</Button>
+            <Button onMouseClicked="#onVerificarProdutoButtonClick">Verificar Produto</Button>
+            <Button onMouseClicked="#onSobreButtonClick">Sobre o Sistema</Button>
+            <Button onMouseClicked="#onSairButtonClick">Sair</Button>
+            <Label>versão 1.0.0</Label>
+        </VBox>
+    </HBox>
 </VBox>
