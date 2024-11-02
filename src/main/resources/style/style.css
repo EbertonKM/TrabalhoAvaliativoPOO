@@ -1,7 +1,9 @@
-.home-main-box {
+/*ESTILIZAÇÕES GENÉRICAS*/
+.gradient-box {
     -fx-background-color: linear-gradient(to bottom right, #c5c6c7, #878f99, #656c75);
 }
 
+/*ESTILIZAÇÕES DO HOME*/
 .home-menubar {
     -fx-font-size: 13px;
     -fx-border-color: #c5c6c7;
@@ -18,6 +20,7 @@
     -fx-pref-height: 35px;
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
+    -fx-font-weight: bold;
 }
 
 .home-options .button:hover {
@@ -26,6 +29,16 @@
     -fx-border-color: #5b6070;
 }
 
-.home-imageview {
-    -fx-z-index: -1;
+/*ESTILIZAÇÕES DO CAIXA*/
+/*ESTILIZAÇÕES DO VERIFICADORDEPRECO*/
+/*ESTILIZAÇÕES DO SOBRE*/
+.sobre-titulo {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f1f30;
+}
+
+.sobre-descricao {
+    -fx-font-size: 16;
+    -fx-text-fill: #1f1f30;
 }

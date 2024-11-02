@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.geometry.Insets?>
-<VBox styleClass="home-main-box"
+
+<VBox styleClass="gradient-box"
       xmlns="http://javafx.com/javafx/17.0.12"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.example.sistemacaixapontodopovo.HomeController">
@@ -15,19 +15,20 @@
             <MenuItem fx:id="menuItemCaixa" text="_Caixa" />
             <MenuItem fx:id="menuItemVerificarProduto" text="_Verificar Produto" />
         </Menu>
-        <Menu text="S_obre" fx:id="menuSobre">
-            <MenuItem/>
-        </Menu>
-        <Menu text="_Sair" fx:id="menuSair">
-            <MenuItem/>
+        <Menu text="_Programa">
+        <MenuItem text="S_obre" fx:id="menuItemSobre"/>
+        <MenuItem text="_Sair" fx:id="menuItemSair"/>
         </Menu>
     </MenuBar>
 
     <HBox>
         <VBox>
-        <ImageView styleClass="home-imageview" fitHeight="240.0" fitWidth="240.0" preserveRatio="true">
+        <ImageView fitHeight="200.0" fitWidth="200.0" preserveRatio="true">
             <Image url="@../../../img/pontoDoPovoLogo-GeradaPorIA.png" />
         </ImageView>
+            <padding>
+                <Insets top="20" bottom="20" right="20" left="20"/>
+            </padding>
         </VBox>
 
         <VBox styleClass="home-options" spacing="7.0">

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.sistemacaixapontodopovo.SobreController"
+      alignment="TOP_CENTER"
+      styleClass="gradient-box">
+
+    <padding>
+        <Insets top="30" bottom="30"/>
+    </padding>
+
+    <VBox alignment="TOP_CENTER">
+        <padding>
+            <Insets bottom="15"/>
+        </padding>
+        <ImageView fitHeight="200.0" fitWidth="200.0" preserveRatio="true">
+            <Image url="@../../../img/pontoDoPovoLogo-GeradaPorIA.png" />
+        </ImageView>
+        <Label>versão 1.0.0</Label>
+    </VBox>
+
+    <VBox alignment="TOP_CENTER">
+        <padding>
+            <Insets top="15"/>
+        </padding>
+        <Label styleClass="sobre-titulo" fx:id="titulo1">DESENVOLVEDOR:</Label>
+        <Label styleClass="sobre-descricao" fx:id="texto1">Eberton Kociba</Label>
+    </VBox>
+
+    <VBox alignment="TOP_CENTER">
+        <padding>
+            <Insets top="20"/>
+        </padding>
+        <Label styleClass="sobre-titulo" fx:id="titulo2">E-MAIL DE CONTATO:</Label>
+        <Label styleClass="sobre-descricao" fx:id="texto2">ebertonkociba@gmail.com</Label>
+    </VBox>
+</VBox>
