@@ -1,15 +1,11 @@
 package com.example.sistemacaixapontodopovo;
 
-import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
-import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
-import java.nio.file.FileSystems;
 
 public class HomeController {
 

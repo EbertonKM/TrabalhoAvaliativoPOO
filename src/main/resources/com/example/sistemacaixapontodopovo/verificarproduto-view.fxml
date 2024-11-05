@@ -10,16 +10,14 @@
     <Label>Verificador de preço</Label>
     <HBox>
         <VBox>
-            <Label styleClass="verificadordepreco-titulo">Código do produto</Label>
+            <Label styleClass="verificadordepreco-titulo">Código</Label>
             <TextField fx:id="textFieldVerificador" maxWidth="50" onKeyTyped="#onTextFieldVerificadorKeyTyped"/>
         </VBox>
         <VBox>
-            <Label styleClass="verificadordepreco-titulo">Nome do produto</Label>
-            <ComboBox fx:id="comboBoxVerificador" prefWidth="300"/>
+            <Label styleClass="verificadordepreco-titulo">Produto</Label>
+            <ComboBox fx:id="comboBoxVerificador" prefWidth="300" onAction="#onComboBoxVerificadorAction"/>
         </VBox>
     </HBox>
-    <Label styleClass="verificadordepreco-titulo">Descrição</Label>
-    <Label fx:id="labelDescricaoVerificador" styleClass="verificadordepreco-descricao"/>
     <HBox>
         <VBox>
             <Label styleClass="verificadordepreco-titulo">Valor</Label>

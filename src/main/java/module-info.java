@@ -8,4 +8,5 @@ module com.example.sistemacaixapontodopovo {
     opens com.example.sistemacaixapontodopovo to javafx.fxml;
     opens util to com.google.gson;
     exports com.example.sistemacaixapontodopovo;
+    exports util to com.google.gson;
 }
