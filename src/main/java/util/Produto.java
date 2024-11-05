@@ -17,7 +17,7 @@ public class Produto {
         return this.itemId;
     }
 
-    public String getItemDescricao(String itemDescricao) {
+    public String getItemDescricao() {
         return this.itemDescricao;
     }
 

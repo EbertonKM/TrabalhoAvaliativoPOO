@@ -5,11 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import util.ProdutoLoader;
 
 import java.io.IOException;
+import java.nio.file.FileSystems;
 import java.util.Objects;
 
 public class Home extends Application {
+    private static final ProdutoLoader produtoLoader = new ProdutoLoader(System.getProperty("user.dir") + "\\src\\main\\resources\\json\\informacoesProdutos.json");
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Home.class.getResource("home-view.fxml"));
@@ -24,5 +28,9 @@ public class Home extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+
+    public static ProdutoLoader getProdutoLoader() {
+        return produtoLoader;
     }
 }
