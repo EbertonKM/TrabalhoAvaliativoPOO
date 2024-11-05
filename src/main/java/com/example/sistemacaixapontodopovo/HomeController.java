@@ -36,20 +36,20 @@ public class HomeController {
 
     @FXML
     protected void onCaixaButtonClick() {
-        //try {
+        try {
             new Caixa();
-        //} catch (IOException e) {
-            //throw new RuntimeException("Erro ao iniciar a tela Caixa");
-        //}
+        } catch (IOException e) {
+            throw new RuntimeException("Erro ao iniciar a tela Caixa");
+        }
     }
 
     @FXML
     protected void onVerificarProdutoButtonClick() {
-        //try {
+        try {
             new VerificarProduto();
-        //} catch (IOException e) {
-        //    throw new RuntimeException("Erro ao iniciar a tela VerificarProduto");
-        //}
+        } catch (IOException e) {
+            throw new RuntimeException("Erro ao iniciar a tela VerificarProduto");
+        }
     }
 
     @FXML

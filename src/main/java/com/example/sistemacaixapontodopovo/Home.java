@@ -17,6 +17,7 @@ public class Home extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style/style.css")).toExternalForm());
         stage.setTitle("Supermercado Ponto do Povo");
         stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/home-icon.png"))));
+        stage.resizableProperty().setValue(Boolean.FALSE);
         stage.setScene(scene);
         stage.show();
     }

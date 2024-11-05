@@ -15,6 +15,7 @@ public class Sobre extends Stage {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style/style.css")).toExternalForm());
         this.setTitle("Sobre o sistema");
         this.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/sobre-icon.png"))));
+        this.resizableProperty().setValue(Boolean.FALSE);
         this.setScene(scene);
         this.show();
     }
