@@ -1,0 +1,302 @@
+[
+  {
+    "itemId": 1,
+    "itemDescricao": "Arroz Urbano 1kg",
+    "itemPreco": 11.64,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 2,
+    "itemDescricao": "Banana Caturra",
+    "itemPreco": 3.90,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 3,
+    "itemDescricao": "Pão de forma tradicional Visconti",
+    "itemPreco": 6.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 4,
+    "itemDescricao": "Leite Integral Parmalat 1L",
+    "itemPreco": 5.29,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 5,
+    "itemDescricao": "Feijão Preto Camil 1kg",
+    "itemPreco": 8.45,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 6,
+    "itemDescricao": "Açúcar Refinado União 1kg",
+    "itemPreco": 3.69,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 7,
+    "itemDescricao": "Macarrão Espaguete Renata 500g",
+    "itemPreco": 4.19,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 8,
+    "itemDescricao": "Café Melitta 500g",
+    "itemPreco": 15.90,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 9,
+    "itemDescricao": "Óleo de Soja Liza 900ml",
+    "itemPreco": 7.49,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 10,
+    "itemDescricao": "Farinha de Trigo Dona Benta 1kg",
+    "itemPreco": 4.59,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 11,
+    "itemDescricao": "Molho de Tomate Pomarola 340g",
+    "itemPreco": 2.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 12,
+    "itemDescricao": "Cereal Matinal Nescau 250g",
+    "itemPreco": 8.79,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 13,
+    "itemDescricao": "Biscoito Recheado Trakinas 140g",
+    "itemPreco": 3.19,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 14,
+    "itemDescricao": "Sabonete Lux 85g",
+    "itemPreco": 1.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 15,
+    "itemDescricao": "Shampoo Seda 325ml",
+    "itemPreco": 8.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 16,
+    "itemDescricao": "Condicionador Pantene 400ml",
+    "itemPreco": 16.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 17,
+    "itemDescricao": "Detergente Ypê Neutro 500ml",
+    "itemPreco": 2.19,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 18,
+    "itemDescricao": "Amaciante Comfort 2L",
+    "itemPreco": 15.49,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 19,
+    "itemDescricao": "Sabão em Pó Omo 1.6kg",
+    "itemPreco": 19.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 20,
+    "itemDescricao": "Desinfetante Pinho Sol 500ml",
+    "itemPreco": 6.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 21,
+    "itemDescricao": "Água Sanitária Qboa 1L",
+    "itemPreco": 3.29,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 22,
+    "itemDescricao": "Papel Higiênico Neve 30m (4 rolos)",
+    "itemPreco": 9.49,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 23,
+    "itemDescricao": "Fralda Descartável Pampers M (24 un)",
+    "itemPreco": 29.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 24,
+    "itemDescricao": "Alvejante Vanish 500ml",
+    "itemPreco": 18.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 25,
+    "itemDescricao": "Limpador Multiuso Veja 500ml",
+    "itemPreco": 7.89,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 26,
+    "itemDescricao": "Suco de Laranja Del Valle 1L",
+    "itemPreco": 6.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 27,
+    "itemDescricao": "Cerveja Skol Lata 350ml",
+    "itemPreco": 2.79,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 28,
+    "itemDescricao": "Refrigerante Coca-Cola 2L",
+    "itemPreco": 7.49,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 29,
+    "itemDescricao": "Água Mineral Bonafont 500ml",
+    "itemPreco": 1.49,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 30,
+    "itemDescricao": "Achocolatado Toddy 400g",
+    "itemPreco": 9.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 31,
+    "itemDescricao": "Queijo Mussarela Fatiado 200g",
+    "itemPreco": 12.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 32,
+    "itemDescricao": "Manteiga Aviação 200g",
+    "itemPreco": 8.49,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 33,
+    "itemDescricao": "Iogurte Natural Nestlé 170g",
+    "itemPreco": 1.89,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 34,
+    "itemDescricao": "Creme de Leite Nestlé 200g",
+    "itemPreco": 3.49,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 35,
+    "itemDescricao": "Requeijão Cremoso Polenghi 200g",
+    "itemPreco": 6.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 36,
+    "itemDescricao": "Presunto Fatiado Sadia 200g",
+    "itemPreco": 9.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 37,
+    "itemDescricao": "Coxa de Frango Congelada Seara 1kg",
+    "itemPreco": 12.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 38,
+    "itemDescricao": "File de Peito de Frango Perdigão 1kg",
+    "itemPreco": 14.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 39,
+    "itemDescricao": "Carne Moída Bovina 1kg",
+    "itemPreco": 28.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 40,
+    "itemDescricao": "Bife de Contra Filé 1kg",
+    "itemPreco": 45.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 41,
+    "itemDescricao": "Linguiça Calabresa Perdigão 500g",
+    "itemPreco": 14.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 42,
+    "itemDescricao": "Peixe Tilápia Congelada 1kg",
+    "itemPreco": 19.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 43,
+    "itemDescricao": "Camarão Cinza Médio 1kg",
+    "itemPreco": 59.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 44,
+    "itemDescricao": "Ovo de Galinha 30 unidades",
+    "itemPreco": 10.99,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 45,
+    "itemDescricao": "Bacon Seara 300g",
+    "itemPreco": 17.49,
+    "itemUnit": "UN"
+  },
+  {
+    "itemId": 46,
+    "itemDescricao": "Batata Inglesa 1kg",
+    "itemPreco": 3.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 47,
+    "itemDescricao": "Cenoura 1kg",
+    "itemPreco": 4.49,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 48,
+    "itemDescricao": "Cebola 1kg",
+    "itemPreco": 2.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 49,
+    "itemDescricao": "Tomate 1kg",
+    "itemPreco": 4.99,
+    "itemUnit": "Kg"
+  },
+  {
+    "itemId": 50,
+    "itemDescricao": "Alface 1 unidade",
+    "itemPreco": 2.99,
+    "itemUnit": "UN"
+  }
+]

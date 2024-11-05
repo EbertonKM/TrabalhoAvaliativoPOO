@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -10,4 +7,27 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.sistemacaixapontodopovo.VerificarProdutoController">
 
+    <Label>Verificador de preço</Label>
+    <HBox>
+        <VBox>
+            <Label styleClass="verificadordepreco-titulo">Código do produto</Label>
+            <TextField fx:id="textFieldVerificador" maxWidth="50" onKeyTyped="#onTextFieldVerificadorKeyTyped"/>
+        </VBox>
+        <VBox>
+            <Label styleClass="verificadordepreco-titulo">Nome do produto</Label>
+            <ComboBox fx:id="comboBoxVerificador" prefWidth="300"/>
+        </VBox>
+    </HBox>
+    <Label styleClass="verificadordepreco-titulo">Descrição</Label>
+    <Label fx:id="labelDescricaoVerificador" styleClass="verificadordepreco-descricao"/>
+    <HBox>
+        <VBox>
+            <Label styleClass="verificadordepreco-titulo">Valor</Label>
+            <Label fx:id="labelValorVerificador" styleClass="verificadordepreco-descricao"/>
+        </VBox>
+        <VBox>
+            <Label styleClass="verificadordepreco-titulo">Unit</Label>
+            <Label fx:id="labelUnitVerificador" styleClass="verificadordepreco-descricao"/>
+        </VBox>
+    </HBox>
 </VBox>
