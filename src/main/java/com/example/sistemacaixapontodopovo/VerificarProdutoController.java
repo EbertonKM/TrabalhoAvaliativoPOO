@@ -1,15 +1,18 @@
 package com.example.sistemacaixapontodopovo;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.KeyCode;
+
 
 import javafx.util.StringConverter;
 import util.Produto;
 
 import java.util.List;
-
 
 public class VerificarProdutoController {
     @FXML
@@ -23,13 +26,15 @@ public class VerificarProdutoController {
 
     @FXML
     public void initialize() {
+        //Configurações do TextField onde é informado o ID para aceitar somente números
         textFieldVerificador.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*")) {
                 textFieldVerificador.setText(newValue.replaceAll("\\D", ""));
             }
         });
-
+        //Configurações do ComboBox
         comboBoxVerificador.getItems().addAll(Home.getProdutoLoader().getProdutos());
+        //faz com que o combobox exiba a descrição dos produtos ao invés do objeto produto vinculado
         comboBoxVerificador.setConverter(new StringConverter<>() {
             @Override
             public String toString(Produto produto) {
@@ -59,9 +64,16 @@ public class VerificarProdutoController {
                 return;
             }
         }
+        //caso não encontre o produto
         comboBoxVerificador.setValue(null);
         labelValorVerificador.setText("");
         labelUnitVerificador.setText("");
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle("Verificação de produto");
+        alerta.setHeaderText(null);
+        alerta.setContentText("Produto não registrado no sistema");
+        alerta.showAndWait();
+        textFieldVerificador.setText("");
     }
 
     @FXML

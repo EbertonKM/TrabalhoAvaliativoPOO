@@ -1,5 +1,11 @@
 [
   {
+    "itemId": 0,
+    "itemDescricao": "Água Crystal 5l",
+    "itemPreco": 13.99,
+    "itemUnit": "UN"
+  },
+  {
     "itemId": 1,
     "itemDescricao": "Arroz Urbano 1kg",
     "itemPreco": 11.64,
