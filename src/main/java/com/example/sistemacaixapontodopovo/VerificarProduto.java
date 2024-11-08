@@ -11,7 +11,7 @@ import java.util.Objects;
 public class VerificarProduto extends Stage {
     public VerificarProduto() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Home.class.getResource("verificarproduto-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 450, 520);
+        Scene scene = new Scene(fxmlLoader.load(), 450, 225);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style/style.css")).toExternalForm());
         this.setTitle("Verificação de produtos");
         this.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/verificarproduto-icon.png"))));

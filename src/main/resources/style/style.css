@@ -31,6 +31,33 @@
 
 /*ESTILIZAÇÕES DO CAIXA*/
 /*ESTILIZAÇÕES DO VERIFICADORDEPRECO*/
+.verificadordepreco-titulo-principal {
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f1f30;
+}
+
+.verificadordepreco-titulo {
+    -fx-font-size: 18;
+    -fx-text-fill: #1f1f30;
+}
+
+.textFieldVerificador {
+    -fx-font-size: 16px;
+}
+
+.comboBoxVerificador {
+    -fx-font-size: 16px;
+}
+
+.verificadordepreco-descricao {
+    -fx-font-size: 16;
+    -fx-text-fill: #1f1f30;
+    -fx-background-color: #d1d1d1;
+    -fx-background-radius: 5px;
+    -fx-label-padding: 5px;
+}
+
 /*ESTILIZAÇÕES DO SOBRE*/
 .sobre-titulo {
     -fx-font-size: 16;

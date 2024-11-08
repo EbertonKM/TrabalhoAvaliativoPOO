@@ -3,23 +3,41 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <VBox xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.sistemacaixapontodopovo.VerificarProdutoController">
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.sistemacaixapontodopovo.VerificarProdutoController"
+      styleClass="gradient-box">
+    <padding>
+        <Insets top="20" bottom="15" right="20" left="20"/>
+    </padding>
 
-    <Label>Verificador de preço</Label>
+    <Label styleClass="verificadordepreco-titulo-principal">Verificador de preço</Label>
     <HBox>
         <VBox>
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
             <Label styleClass="verificadordepreco-titulo">Código</Label>
-            <TextField fx:id="textFieldVerificador" maxWidth="50" onKeyTyped="#onTextFieldVerificadorKeyTyped"/>
+            <TextField fx:id="textFieldVerificador"
+                       styleClass="textFieldVerificador" maxWidth="70"
+                       onKeyTyped="#onTextFieldVerificadorKeyTyped"/>
         </VBox>
         <VBox>
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
             <Label styleClass="verificadordepreco-titulo">Produto</Label>
-            <ComboBox fx:id="comboBoxVerificador" prefWidth="300" onAction="#onComboBoxVerificadorAction"/>
+            <ComboBox fx:id="comboBoxVerificador"
+                      styleClass="comboBoxVerificador" prefWidth="320"
+                      onAction="#onComboBoxVerificadorAction"/>
         </VBox>
     </HBox>
     <HBox>
-        <VBox>
+        <padding>
+            <Insets top="10" right="10" left="10"/>
+        </padding>
+        <VBox prefWidth="80">
             <Label styleClass="verificadordepreco-titulo">Valor</Label>
             <Label fx:id="labelValorVerificador" styleClass="verificadordepreco-descricao"/>
         </VBox>

@@ -5,8 +5,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.KeyCode;
 
 
 import javafx.util.StringConverter;
@@ -26,13 +24,13 @@ public class VerificarProdutoController {
 
     @FXML
     public void initialize() {
-        //Configurações do TextField onde é informado o ID para aceitar somente números
+        //configurações do TextField para aceitar somente números
         textFieldVerificador.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*")) {
                 textFieldVerificador.setText(newValue.replaceAll("\\D", ""));
             }
         });
-        //Configurações do ComboBox
+        //inserção da lista de produtos no combobox
         comboBoxVerificador.getItems().addAll(Home.getProdutoLoader().getProdutos());
         //faz com que o combobox exiba a descrição dos produtos ao invés do objeto produto vinculado
         comboBoxVerificador.setConverter(new StringConverter<>() {
