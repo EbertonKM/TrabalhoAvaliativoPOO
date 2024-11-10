@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.sistemacaixapontodopovo.CaixaController">
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
 
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.sistemacaixapontodopovo.CaixaController">
+    <padding>
+        <Insets top="20" bottom="15" right="20" left="20"/>
+    </padding>
+
+    <Label styleClass="caixa-titulo-principal">Caixa do Supermercado</Label>
+    <HBox>
+        <VBox>
+            <Label styleClass="caixa-titulo">Código</Label>
+            <TextField styleClass="textFieldCaixa" fx:id="textFieldCodigo" onKeyTyped="#onTextFieldCodigoKeyTyped"/>
+        </VBox>
+        <VBox>
+            <Label styleClass="caixa-titulo">Quantidade</Label>
+            <TextField styleClass="textFieldCaixa" fx:id="textFieldQuantidade"/>
+        </VBox>
+    </HBox>
+    <Label fx:id="labelInformacoesItem"/>
+    <Button styleClass="buttonCaixaAdicionarProduto"
+            fx:id="buttonAdicionarProduto"
+            onMouseClicked="#onButtonAdicionarProdutoMouseClicked"
+            disable="true">Adicionar Produto</Button>
+    <Label styleClass="caixa-titulo">Lista de produtos:</Label>
+    <TableView fx:id="tableViewProdutos"/>
+    <Button styleClass="buttonCaixaExcluir"
+            fx:id="buttonExcluir"
+            onMouseClicked="#onButtonExcluirMouseClicked"
+            disable="true">Excluir</Button>
+    <HBox>
+        <VBox>
+            <Label styleClass="caixa-titulo">Total:</Label>
+            <Label fx:id="labelValor" styleClass="labelCaixaPreco"/>
+        </VBox>
+        <VBox>
+            <Label styleClass="caixa-titulo">Pago:</Label>
+            <TextField fx:id="textFieldPago" styleClass="textFieldCaixaPreco" onKeyTyped="#onTextFieldPrecoKeyTyped"/>
+        </VBox>
+        <VBox>
+            <Label styleClass="caixa-titulo">Troco:</Label>
+            <Label fx:id="labelTroco" styleClass="labelCaixaTroco"/>
+        </VBox>
+    </HBox>
+    <Button styleClass="buttonCaixaConfirmar"
+            fx:id="buttonConfirmar"
+            onMouseClicked="#onButtonConfirmarMouseClicked"
+            disable="true">Confirmar</Button>
 </VBox>

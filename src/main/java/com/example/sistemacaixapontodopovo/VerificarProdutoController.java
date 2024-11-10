@@ -1,10 +1,7 @@
 package com.example.sistemacaixapontodopovo;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 
 import javafx.util.StringConverter;
@@ -51,7 +48,11 @@ public class VerificarProdutoController {
 
     @FXML
     protected void onTextFieldVerificadorKeyTyped() {
+        textFieldVerificador.getStyleClass().remove("texto-vermelho");
         if (textFieldVerificador.getText().isEmpty()) {
+            comboBoxVerificador.setValue(null);
+            labelValorVerificador.setText("");
+            labelUnitVerificador.setText("");
             return;
         }
         for (Produto produto : Home.getProdutoLoader().getProdutos()) {
@@ -66,12 +67,7 @@ public class VerificarProdutoController {
         comboBoxVerificador.setValue(null);
         labelValorVerificador.setText("");
         labelUnitVerificador.setText("");
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("Verificação de produto");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Produto não registrado no sistema");
-        alerta.showAndWait();
-        textFieldVerificador.setText("");
+        textFieldVerificador.getStyleClass().add("texto-vermelho");
     }
 
     @FXML
