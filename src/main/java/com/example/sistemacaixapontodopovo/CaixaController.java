@@ -1,16 +1,8 @@
 package com.example.sistemacaixapontodopovo;
 
-import javafx.animation.PauseTransition;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.util.Duration;
 import util.Produto;
-
-import java.util.Optional;
 
 public class CaixaController {
     @FXML
@@ -22,11 +14,11 @@ public class CaixaController {
     @FXML
     private Button buttonAdicionarProduto;
     @FXML
-    private TableView<Produto> tableViewProdutos;
+    private ListView<String> listViewProdutos;
     @FXML
     private Button buttonExcluir;
     @FXML
-    private Label labelValor;
+    private Label labelValorTotal;
     @FXML
     private TextField textFieldPago;
     @FXML
@@ -34,8 +26,9 @@ public class CaixaController {
     @FXML
     private Button buttonConfirmar;
 
+    double valorTotal = 0;
+
     @FXML
-    @SuppressWarnings("unchecked")
     public void initialize() {
         //configurações do TextField para aceitar somente números
         textFieldCodigo.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -44,8 +37,8 @@ public class CaixaController {
             }
         });
         textFieldQuantidade.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("\\d*")) {
-                textFieldQuantidade.setText(newValue.replaceAll("\\D", ""));
+            if (!newValue.matches("[\\d.,]*")) {
+                textFieldQuantidade.setText(newValue.replaceAll("[^\\d.,]", ""));
             }
         });
         textFieldPago.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -53,45 +46,7 @@ public class CaixaController {
                 textFieldPago.setText(newValue.replaceAll("[^\\d.,]", ""));
             }
         });
-
-        //cria as colunas da tableview
-        TableColumn<Produto, String> descricao = new TableColumn<>("Descrição");
-        TableColumn<Produto, String> preco = new TableColumn<>("Preço");
-        TableColumn<Produto, String> unit = new TableColumn<>("Unit");
-
-        //configura cada coluna para se ligar a um atributo de Produto
-        descricao.setCellValueFactory(new PropertyValueFactory<>("itemDescricao"));
-        preco.setCellValueFactory(new PropertyValueFactory<>("itemPreco"));
-        unit.setCellValueFactory(new PropertyValueFactory<>("itemUnit"));
-
-        //define a largura das colunas
-        descricao.setPrefWidth(295);
-        preco.setPrefWidth(50);
-        unit.setPrefWidth(50);
-
-        //impede alteração da largura em tempo de execução
-        descricao.setResizable(false);
-        preco.setResizable(false);
-        unit.setResizable(false);
-
-        //desabilita a ordenação das colunas
-        descricao.setSortable(false);
-        descricao.setReorderable(false);
-        preco.setSortable(false);
-        preco.setReorderable(false);
-        unit.setSortable(false);
-        unit.setReorderable(false);
-
-        tableViewProdutos.getColumns().addAll(descricao, preco, unit);
-        tableViewProdutos.setPlaceholder(new Label("Nenhum produto"));
-
-        tableViewProdutos.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-            if (newSelection != null) {
-                System.out.println("Linha selecionada: " + tableViewProdutos.getSelectionModel().getSelectedIndex());
-            }
-        });
-        tableViewProdutos.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-
+        labelValorTotal.setText("R$ 0,00");
     }
 
     @FXML
@@ -115,33 +70,57 @@ public class CaixaController {
     @FXML
     protected void onButtonAdicionarProdutoMouseClicked() {
         int codigo = Integer.parseInt(textFieldCodigo.getText());
-        int quantidade;
+        double quantidade;
+        Produto produto = Home.getProdutoLoader().getProduto(codigo);
         if (textFieldQuantidade.getText().isEmpty()) {
             quantidade = 1;
         } else {
-            quantidade = Integer.parseInt(textFieldQuantidade.getText());
+            quantidade = Double.parseDouble(textFieldQuantidade.getText().replaceAll(",", "."));
         }
-        for(int i = quantidade; i > 0; i--) {
-            tableViewProdutos.getItems().add(Home.getProdutoLoader().getProduto(codigo));
-            tableViewProdutos.refresh();
-            tableViewProdutos.getSelectionModel().clearSelection();
-        }
+        valorTotal += produto.getItemPreco() * quantidade;
+        listViewProdutos.getItems().add(produto.getItemDescricao() + " - " +
+                quantidade + " - " +
+                produto.getItemUnit() + " - R$ " +
+                produto.getItemPreco() + " - R$ " +
+                String.format("%.2f", produto.getItemPreco() * quantidade));
+        labelValorTotal.setText("R$ " + String.format("%.2f", valorTotal));
         textFieldCodigo.setText("");
         textFieldQuantidade.setText("");
+        labelInformacoesItem.setText("");
+        buttonAdicionarProduto.setDisable(true);
     }
 
     @FXML
     protected void onButtonExcluirMouseClicked() {
-        System.out.println("Not yet implemented");
+        String linha = listViewProdutos.getSelectionModel().getSelectedItem().replace(",", ".");
+        valorTotal -= Double.parseDouble(linha.substring(linha.lastIndexOf(" ") + 1));
+        listViewProdutos.getItems().remove(listViewProdutos.getSelectionModel().getSelectedItem());
+        labelValorTotal.setText("R$ " + String.format("%.2f", valorTotal));
     }
 
     @FXML
-    protected void onTextFieldPrecoKeyTyped() {
-        System.out.println("Not yet implemented");
+    protected void onTextFieldPagoKeyTyped() {
+        double pagamento;
+        try {
+            pagamento = Double.parseDouble(textFieldPago.getText().replace(",", "."));
+        } catch (NumberFormatException e) {
+            System.out.println("Erro ao converter string do TextField de pagamento em um valor Double");
+            return;
+        }
+        if (pagamento < valorTotal) {
+            buttonConfirmar.setDisable(true);
+            labelTroco.setText("");
+        } else {
+            buttonConfirmar.setDisable(false);
+            labelTroco.setText("R$ " + String.format("%.2f", pagamento - valorTotal));
+        }
     }
 
     @FXML
     protected void onButtonConfirmarMouseClicked() {
-        System.out.println("Not yet implemented");
+        listViewProdutos.getItems().clear();
+        textFieldPago.clear();
+        labelValorTotal.setText("");
+        labelTroco.setText("");
     }
 }

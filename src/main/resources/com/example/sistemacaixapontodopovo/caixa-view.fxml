@@ -29,19 +29,18 @@
             onMouseClicked="#onButtonAdicionarProdutoMouseClicked"
             disable="true">Adicionar Produto</Button>
     <Label styleClass="caixa-titulo">Lista de produtos:</Label>
-    <TableView fx:id="tableViewProdutos"/>
+    <ListView fx:id="listViewProdutos"/>
     <Button styleClass="buttonCaixaExcluir"
             fx:id="buttonExcluir"
-            onMouseClicked="#onButtonExcluirMouseClicked"
-            disable="true">Excluir</Button>
+            onMouseClicked="#onButtonExcluirMouseClicked">Excluir</Button>
     <HBox>
         <VBox>
             <Label styleClass="caixa-titulo">Total:</Label>
-            <Label fx:id="labelValor" styleClass="labelCaixaPreco"/>
+            <Label fx:id="labelValorTotal" styleClass="labelCaixaPreco"/>
         </VBox>
         <VBox>
             <Label styleClass="caixa-titulo">Pago:</Label>
-            <TextField fx:id="textFieldPago" styleClass="textFieldCaixaPreco" onKeyTyped="#onTextFieldPrecoKeyTyped"/>
+            <TextField fx:id="textFieldPago" styleClass="textFieldCaixaPreco" onKeyTyped="#onTextFieldPagoKeyTyped"/>
         </VBox>
         <VBox>
             <Label styleClass="caixa-titulo">Troco:</Label>
