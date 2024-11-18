@@ -16,8 +16,8 @@
             <MenuItem fx:id="menuItemVerificarProduto" text="_Verificar Produto" />
         </Menu>
         <Menu text="_Programa">
-        <MenuItem text="S_obre" fx:id="menuItemSobre"/>
-        <MenuItem text="_Sair" fx:id="menuItemSair"/>
+            <MenuItem text="S_obre" fx:id="menuItemSobre"/>
+            <MenuItem text="_Sair" fx:id="menuItemSair"/>
         </Menu>
     </MenuBar>
 

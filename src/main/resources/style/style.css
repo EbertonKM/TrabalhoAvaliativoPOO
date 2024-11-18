@@ -34,6 +34,43 @@
 }
 
 /*ESTILIZAÇÕES DO CAIXA*/
+.caixa-titulo-principal {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f1f30;
+}
+
+.caixa-titulo {
+    -fx-font-size: 16;
+    -fx-text-fill: #1f1f30;
+}
+
+.textFieldCaixa {
+    -fx-font-size: 16px;
+}
+
+.caixaButton {
+    -fx-background-color: #5b6070;
+    -fx-text-fill: #dedfe0;
+    -fx-border-color: #dedfe0;
+    -fx-font-size: 16px;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 35px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-font-weight: bold;
+}
+
+.caixaButton:hover {
+    -fx-background-color: #dedfe0;
+    -fx-text-fill: #5b6070;
+    -fx-border-color: #5b6070;
+}
+
+.textFieldCaixaPreco {
+    -fx-font-size: 16px;
+}
+
 /*ESTILIZAÇÕES DO VERIFICADORDEPRECO*/
 .verificadordepreco-titulo-principal {
     -fx-font-size: 18;

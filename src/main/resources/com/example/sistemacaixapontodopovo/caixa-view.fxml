@@ -7,7 +7,8 @@
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.sistemacaixapontodopovo.CaixaController">
+      fx:controller="com.example.sistemacaixapontodopovo.CaixaController"
+      styleClass="gradient-box">
     <padding>
         <Insets top="20" bottom="15" right="20" left="20"/>
     </padding>
@@ -15,39 +16,68 @@
     <Label styleClass="caixa-titulo-principal">Caixa do Supermercado</Label>
     <HBox>
         <VBox>
+            <padding>
+                <Insets right="40"/>
+            </padding>
             <Label styleClass="caixa-titulo">Código</Label>
-            <TextField styleClass="textFieldCaixa" fx:id="textFieldCodigo" onKeyTyped="#onTextFieldCodigoKeyTyped"/>
+            <TextField styleClass="textFieldCaixa" fx:id="textFieldCodigo" onKeyTyped="#onTextFieldCodigoKeyTyped" prefWidth="80"/>
         </VBox>
         <VBox>
             <Label styleClass="caixa-titulo">Quantidade</Label>
-            <TextField styleClass="textFieldCaixa" fx:id="textFieldQuantidade"/>
+            <TextField styleClass="textFieldCaixa" fx:id="textFieldQuantidade" prefWidth="80"/>
         </VBox>
     </HBox>
-    <Label fx:id="labelInformacoesItem"/>
-    <Button styleClass="buttonCaixaAdicionarProduto"
+    <Label fx:id="labelInformacoesItem">
+        <padding>
+            <Insets top="8" bottom="8"/>
+        </padding>
+        Informe o código do produto
+    </Label>
+    <Button styleClass="caixaButton"
             fx:id="buttonAdicionarProduto"
             onMouseClicked="#onButtonAdicionarProdutoMouseClicked"
             disable="true">Adicionar Produto</Button>
-    <Label styleClass="caixa-titulo">Lista de produtos:</Label>
-    <ListView fx:id="listViewProdutos"/>
-    <Button styleClass="buttonCaixaExcluir"
+    <VBox>
+        <padding>
+            <Insets top="10" bottom="10"/>
+        </padding>
+        <Label styleClass="caixa-titulo">Lista de produtos:</Label>
+        <ListView fx:id="listViewProdutos"/>
+    </VBox>
+    <Button styleClass="caixaButton"
             fx:id="buttonExcluir"
             onMouseClicked="#onButtonExcluirMouseClicked">Excluir</Button>
     <HBox>
+        <padding>
+            <Insets top="10" bottom="10"/>
+        </padding>
         <VBox>
-            <Label styleClass="caixa-titulo">Total:</Label>
-            <Label fx:id="labelValorTotal" styleClass="labelCaixaPreco"/>
+            <Label styleClass="caixa-titulo">
+                <padding>
+                    <Insets bottom="5"/>
+                </padding>
+                Total:
+            </Label>
+            <Label fx:id="labelValorTotal" styleClass="caixa-titulo"/>
         </VBox>
         <VBox>
+            <padding>
+                <Insets right="15" left="15"/>
+            </padding>
             <Label styleClass="caixa-titulo">Pago:</Label>
-            <TextField fx:id="textFieldPago" styleClass="textFieldCaixaPreco" onKeyTyped="#onTextFieldPagoKeyTyped"/>
+            <TextField fx:id="textFieldPago" styleClass="textFieldCaixaPreco" onKeyTyped="#onTextFieldPagoKeyTyped" prefWidth="80"/>
         </VBox>
         <VBox>
-            <Label styleClass="caixa-titulo">Troco:</Label>
-            <Label fx:id="labelTroco" styleClass="labelCaixaTroco"/>
+            <Label styleClass="caixa-titulo">
+                <padding>
+                    <Insets bottom="4"/>
+                </padding>
+                Troco:
+            </Label>
+            <Label fx:id="labelTroco" styleClass="caixa-titulo"/>
         </VBox>
     </HBox>
-    <Button styleClass="buttonCaixaConfirmar"
+    <Button styleClass="caixaButton"
             fx:id="buttonConfirmar"
             onMouseClicked="#onButtonConfirmarMouseClicked"
             disable="true">Confirmar</Button>

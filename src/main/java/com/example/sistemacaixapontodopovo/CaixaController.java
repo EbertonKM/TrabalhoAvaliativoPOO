@@ -52,7 +52,7 @@ public class CaixaController {
     @FXML
     protected void onTextFieldCodigoKeyTyped() {
         if (textFieldCodigo.getText().isEmpty()) {
-            labelInformacoesItem.setText("");
+            labelInformacoesItem.setText("Informe o código do produto");
             buttonAdicionarProduto.setDisable(true);
             return;
         }
@@ -86,7 +86,7 @@ public class CaixaController {
         labelValorTotal.setText("R$ " + String.format("%.2f", valorTotal));
         textFieldCodigo.setText("");
         textFieldQuantidade.setText("");
-        labelInformacoesItem.setText("");
+        labelInformacoesItem.setText("Informe o código do produto");
         buttonAdicionarProduto.setDisable(true);
     }
 
@@ -96,6 +96,8 @@ public class CaixaController {
         valorTotal -= Double.parseDouble(linha.substring(linha.lastIndexOf(" ") + 1));
         listViewProdutos.getItems().remove(listViewProdutos.getSelectionModel().getSelectedItem());
         labelValorTotal.setText("R$ " + String.format("%.2f", valorTotal));
+        textFieldPago.setText("");
+        labelTroco.setText("");
     }
 
     @FXML
@@ -105,6 +107,7 @@ public class CaixaController {
             pagamento = Double.parseDouble(textFieldPago.getText().replace(",", "."));
         } catch (NumberFormatException e) {
             System.out.println("Erro ao converter string do TextField de pagamento em um valor Double");
+
             return;
         }
         if (pagamento < valorTotal) {
